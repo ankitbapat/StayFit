@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+<body ng-app="myApp" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	
+<!-- NavBar -->	
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#home"><span class="glyphicon glyphicon-home"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#testimonial">TESTIMONIAL</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+    <div id="home" class="container-fluid text-center bg">
+    	<div class="container heading">       
+          <h1><b>FITNESS</h1><h1 style="color: #f79e02"> FREAK!</b></h1><br>      
+          <a href="#info"><button class="learn"><b>LEARN MORE</b></button></a>
+     </div>
+    </div>
+
+<!-- LEARN MORE -->
+  <div id="info" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6">
+			<img src="photo3.jpg" alt="image" class="photo img-responsive">			
+		</div>
+		<div class="col-sm-6 text-center">
+			<h1 style="font-size:40px; text-transform: uppercase;">
+			 <b><span style="color: #f79e02">Diet Plan</span> to enhances strength and agility<b></h1>		
+				<div class="table-responsive"> 
+				     <table class="table table-hover table-bordered">
+					    
+					    <thead style="background-color: #4d4d4d; color: white;text-transform: uppercase;">
+					      <tr>
+					      	<th>Day</th>
+					        <th>Pre workout</th>
+					        <th>Post workout</th>
+					        <th>Morning</th>
+					        <th>Lunch</th>
+					        <th>Evening</th>
+					        <th>Dinner</th>
+					      </tr>
+					    </thead>
+
+					    <tbody>
+					      <tr>
+					      	<td>1</td>
+					        <td>Black Coffee</td>
+					        <td>3 Egg Whites</td>
+					        <td>Pasta</td>
+					        <td>Rotis And Sabji</td>
+					        <td>3-4 Egg Whites</td>
+					        <td>Wheat Rotis</td>
+					      </tr>
+					      <tr>
+					        <td>2</td>
+					        <td>4 Egg Whites</td>
+					        <td>6-7 Egg Whites</td>
+					        <td>Whey Proteins</td>
+					        <td>Sprouts</td>
+					        <td>Bajra Rotis</td>
+					        <td>Rice Balls</td>
+					      </tr>
+					      <tr>
+					        <td>3</td>
+					        <td>Sweet Potato</td>
+					        <td>3-4 Slices Fish</td>
+					        <td>Salad</td>
+					        <td>Orange</td>
+					        <td>Jowar Rotis</td>
+					        <td>Pork</td>
+					      </tr>
+					      <tr>
+					        <td>4</td>
+					        <td>Wheat Flakes</td>
+					        <td>Mashed Potato</td>
+					        <td>Carrots</td>
+					        <td>Apple</td>
+					        <td>Nachni Rotis</td>
+					        <td>Fish Cury</td>
+					      </tr>
+					    </tbody>
+
+					  </table>
+  				    </div>			
+		</div>
+	</div>
+  </div>
+
+<!--  ANGULAR ROUTING -->
+ <div id="blog" ng-app="mainApp" class="row container-fluid">
+
+ 		<div class="col-sm-12 titles">			
+ 			<div class="col-sm-3 aIn"><a href="#!nutrition"><b>NUTRITION</b></a></div>
+ 			<div class="col-sm-3 aIn"><a href="#!strength"><b>STRENGTH</b></a></div>
+ 			<div class="col-sm-3 aIn"><a href="#!cardio"><b>CARDIO</b></a></div>
+ 			<div class="col-sm-3 aIn"><a href="#!meditation"><b>MEDITATION</b></a></div>
+ 		</div>
+
+ 		<div class="col-sm-12" style="margin-top: 10px;">
+ 			<div ng-view style="overflow: auto; max-height: 600px; width: 100%;
+ 			border: 2px solid #4d4d4d; background-color: #4d4d4d; color: white;"></div>
+ 		</div>
+
+ </div>
+
+<!-- colosual -->
+<div id="testimonial" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6"><img src="gymMan.jpg"></div>
+
+		<div id="myCarousel" class="container-fluid col-sm-6 carousel slide" data-ride="carousel" 
+		style="height:400px;" >
+				<div class="row">
+						<h4>TESTINONIAL</h4>
+					    <!-- Wrapper for slides -->
+					    <div class="carousel-inner">
+						      <div class="item active">
+						        <p><h2>"Body Fitness helped me get my confidence back. I look great, and I feel even better! I love my body more."</h2><small>Debbie M.</small></p>
+						      </div>
+
+						      <div class="item">
+						        <p><h2>"I love the ease of working out at home & your information is the most accurate and provides great results"</h2><small>Erin G.</small></p>
+						      </div>
+						    
+						      <div class="item">
+						        <p><h2>"FINALLY an affordable product that delivers EXACTLY what we want! I'm totally blown away. I'm totally hooked."</h2><small>Danielle B.</small></p>
+						      </div>
+					    </div>	       
+					    <!-- Indicators -->
+					    
+					    <ol class="carousel-indicators" >
+					      <li data-target="#myCarousel" data-slide-to="0" class="active" style="background-color:   black;"></li>
+					      <li data-target="#myCarousel" data-slide-to="1" style="background-color: black;"></li>
+					      <li data-target="#myCarousel" data-slide-to="2" style="background-color: black;"></li>
+					    </ol>
+					    
+					      <!-- Left and right controls -->
+	                    <a class="left" href="#myCarousel" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" style="float:left;font-size:40px;    color: #f79e02;"></span></a>
+						<a class="right" href="#myCarousel" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"style="float:right;font-size:40px;    color: #f79e02;"></span></a>	
+						   
+				</div>	    
+		</div>
+	</div>
+</div>
+ 
+<!-- FEATURED IN -->
+<div class="container-fluid" style="background-color: #edeae5">
+	<div class="row">
+		<h1>FEATURED IN</h1><br>
+	</div>
+	<div class="row">	
+		<div class="col-sm-3 fIn"><h2><b>FITNESS</b></h2></div>
+		<div class="col-sm-3 fIn"><h2><b>WIRE<b></h2></div>
+		<div class="col-sm-3 fIn"><h2><b>FORBES</b></h2></div>
+		<div class="col-sm-3 "><h2><b>ENTERPRENENEUR</b></h2></div>		
+	</div>
+</div>
+
+<!-- FOOTER -->
+<div id="contact" class="container-fluid" style="background-color: black;">
+	<h2 style="margin-top: 0px; color:#f79e02 " class="text-justify"><b>CONTACT ME</b></h2>
+	<div class="row">
+		<div class="col-sm-7">
+            <form method="post">
+              <div class="row">
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required> 
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                  </div>
+              </div>
+                    <textarea class="form-control" id="subject" name="subjects" placeholder="Subject" required></textarea><br>
+                    <textarea class="form-control" id="message" name="messages" placeholder="Message" rows="5"></textarea><br>
+              <div class="row">
+                  <div class="col-sm-12 form-group">
+                    <button class="btn" type="submit" name="submit" value="Submit" style="width:100%; background-color:#f79e02; color: white;"><b>Send</b></button>
+                  </div>
+              </div>
+            </form>              
+        </div>
+
+		<div class="col-sm-5 flinks" style="padding: 10px;">
+			<div class="row">
+            <a href="https://twitter.com/login?lang=en" target="_blank">
+              <i class="fa fa-twitter"></i></a>                              
+            <a href="https://www.facebook.com/ankit.bapat.5" target="_blank">
+              <i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank">
+              <i class="fa fa-instagram"></i></a>
+            <a href="https://plus.google.com/105483554879242439807" target="_blank">
+              <i class="fa fa-google-plus"></i></a> 
+            </div>
+		
+
+	        <div class=" row fnav" style="padding: 10px;">
+			<div class="col-sm-12">
+				<a href="#home">HOME</a>
+	            <a href="#blog">BLOG</a>
+	            <a href="#testimonial">TESTINONIAL</a>
+			</div>
+		    </div>
+
+		    <div class="row" style="padding: 10px; color: white;">
+			<div class="col-sm-12">
+				<p>Copyright &#169 2018</p>
+			</div>
+		    </div>
+
+        </div>
+
+	</div>	
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, a[href='#home'] , a[href='#info'], a[href='#blog'], a[href='#testimonial']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+
+
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+
+$(window).scroll(function(){
+	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+</script>
+
+<script>
+	
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "nutrition.html"
+    })
+    .when("/nutrition", {
+        templateUrl : "nutrition.html"
+    })
+    .when("/strength", {
+        templateUrl : "strength.html"
+    })
+    .when("/cardio", {
+        templateUrl : "cardio.html"
+    })
+    .when("/meditation", {
+        templateUrl : "meditation.html"   //change later
+    });
+});
+
+</script>
+
+
+
+</body>
